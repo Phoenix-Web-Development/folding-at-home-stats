@@ -1,5 +1,14 @@
-# folding-at-home-stats
-WordPress plugin which allows you to display Folding@Home Stats for you or your team in a shortcode or widget.
+=== Phoenix Folding@Home Stats ===
+Contributors: jamesjonesphoenix
+Tags: folding, stanford, folding at home, folding@home
+Donate link: https://www.phoenixwebdev.com.au/
+Requires at least: 4.6
+Tested up to: 4.7
+Stable tag: 1.0
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+This plugin allows you to display Folding@Home Stats for you or your team in a shortcode or widget.
 
 == Description ==
 
