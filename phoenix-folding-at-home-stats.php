@@ -13,7 +13,7 @@ final class Phoenix_Folding_Home_Stats
 {
     protected static $_instance = null;
     private $prefix = 'ph-';
-    private $version = '1.0';
+    private $version = '1.0.1';
 
     public static function instance()
     {

@@ -1,6 +1,8 @@
 .phoenix-fah-stats table {
   margin: auto; }
-  .phoenix-fah-stats table thead tr th, .phoenix-fah-stats table .fah-donors-header th, .phoenix-fah-stats table .fah-teams-header th {
+  .phoenix-fah-stats table thead tr th,
+  .phoenix-fah-stats table .fah-donor_teams_header th,
+  .phoenix-fah-stats table .fah-team_donors_header th {
     text-align: center; }
   .phoenix-fah-stats table tbody tr.fah-logo img {
     display: block;

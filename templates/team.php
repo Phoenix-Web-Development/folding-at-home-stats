@@ -47,7 +47,7 @@ $show_tagline = isset( $show_tagline ) && ( $show_tagline === 'false' || $show_t
             <th class="string" colspan="2"><?php
                 echo !empty( $url ) && !empty( $name ) ? '<a href="' . $url . '">' . ucfirst( $name ) . '</a> ' : ' ';
                 _e( 'Donors', 'ph_folding' );
-                if ( !empty( $number_team_donors ) && !empty( $max_team_donors ) && sizeof( $max_team_donors ) < $number_team_donors )
+                if ( !empty( $number_team_donors ) && !empty( $max_team_donors ) && $max_team_donors < $number_team_donors )
                     printf( ' <small>(' . __( 'top %d donors of %d', 'ph_folding' ) . ')<small>', $max_team_donors, $number_team_donors );
                 ?></th>
             <?php foreach ( $donors as $donor ) :
