@@ -8,7 +8,6 @@ class Ph_Shortcode
     {
         add_shortcode( 'phoenix_folding_stats', array( $this, 'shortcode_folding_stats' ) );
     }
-
     function shortcode_folding_stats( $atts, $content = "" )
     {
         $atts = shortcode_atts(

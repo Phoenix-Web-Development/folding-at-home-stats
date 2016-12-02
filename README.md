@@ -4,7 +4,7 @@ Tags: folding, stanford, folding at home, folding@home, stats, sidebar, widget, 
 Donate link: https://www.phoenixwebdev.com.au/
 Requires at least: 4.6
 Tested up to: 4.7
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,15 +26,22 @@ It takes less than a minute to setup. All you need is your donor or team ID. The
 
 Folding@home is a project run by Stanford University which allows anyone to assist with disease research by donating their unused computer processing power. Your processing power is used to simulate protein folding, a process whereby proteins assemble themselves into tools which your body can use. Joining in is a doddle; simply [download the F@H software](https://foldingathome.stanford.edu/download/) to get started. Find out more at the [Folding@Home website](https://foldingathome.stanford.edu/).
 
-You can see an example at https://www.phoenixwebdev.com.au/folding-at-home-medical-research/
+You can see an example at https://www.phoenixwebdev.com.au/display-folding-at-home-stats-wordpress-plugin/ which is also our announcement post.
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
-2. Activate the plugin through the 'Plugins' screen in WordPress
+=Install=
+
+1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly. More detailed instructions for this step at https://www.phoenixwebdev.com.au/display-folding-at-home-stats-wordpress-plugin/
+2. Activate the plugin through the 'Plugins' screen in WordPress.
 3. * To display the stats as a widget to to the Appearance->Widgets screen and add the widget 'Folding at Home' to a widget area.
    * To display the stats within a post or page, enter the post/page editing screen and add the shortcode.
 
+=Get Donor name or Team ID=
+
+Learn how to get your id [here](https://www.phoenixwebdev.com.au/display-folding-at-home-stats-wordpress-plugin#headingafterinstallation).
+
+=Uninstall=
 
    If you uninstall this plugin, any stats the plugin recorded to your database will be deleted. No muck will be left behind.
 
@@ -69,7 +76,7 @@ No. The plugin is free. The Folding@Home software is free. The only real cost is
 
 = Does it really make a difference? =
 
-Yes, but we don't have nearly enough people contributing. Read [this](https://www.reddit.com/r/askscience/comments/33mx7v/has_foldinghome_really_accomplished_anything_part/) and [this](https://www.reddit.com/r/askscience/comments/r93i6/has_foldinghome_really_accomplished_anything/).
+Yes, but we don't have nearly enough people contributing. Read [this](https://www.reddit.com/r/askscience/comments/33mx7v/has_foldinghome_really_accomplished_anything_part/), [this](https://www.reddit.com/r/askscience/comments/r93i6/has_foldinghome_really_accomplished_anything/) and [this](http://www.geek.com/news/foldinghome-actually-solves-something-1587368/).
 
 == Screenshots ==
 
@@ -82,6 +89,12 @@ Yes, but we don't have nearly enough people contributing. Read [this](https://ww
 7. Folding stats team content table on our website
 
 == Changelog ==
+= 1.0.2 =
+02/12/2016
+
+ * fixed: enqueues style when widget and no shortcode present
+ * fixed: version numbers in base plugin file added to cooperate with wordpress.org madness
+
 = 1.0.1 =
 01/12/2016
 

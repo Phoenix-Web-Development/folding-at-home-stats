@@ -11,6 +11,14 @@ class Ph_Folding_Widget extends WP_Widget
                 'classname' => 'ph_folding-widget'
             )
         );
+        add_action( 'wp_enqueue_scripts', array( &$this, 'queue_css' ), 101 ); //after register in main class
+    }
+
+    public function queue_css()
+    {
+        if ( is_active_widget( false, false, $this->id_base, true ) ) {
+            wp_enqueue_style( 'phoenix-folding' );
+        }
     }
 
     // widget front-end

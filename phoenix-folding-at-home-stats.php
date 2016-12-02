@@ -1,12 +1,16 @@
 <?php
 
-/*
-Plugin Name: Phoenix Folding At Home Stats
-Plugin URI: http://wordpress.org/plugins/hello-dolly/
-Description: Contains a bunch of phoenix site specific code.
-Author: James Jones
-Version: 1.0
-Author URI: http://www.phoenixwebdev.com.au/
+/**
+ * Plugin Name: Phoenix Folding At Home Stats
+ * Plugin URI: https://www.phoenixwebdev.com.au/display-folding-at-home-stats-wordpress-plugin/
+ * Description: This plugin allows you to display Folding@Home Stats for you or your team in a shortcode or widget.
+ * Version: 1.0.2
+ * Author: Phoenix Web Development
+ * Author URI: https://www.phoenixwebdev.com.au
+ * Requires at least: 4.6
+ * Tested up to: 4.7
+ *
+ * Text Domain: ph-folding
 */
 
 final class Phoenix_Folding_Home_Stats
@@ -50,7 +54,8 @@ final class Phoenix_Folding_Home_Stats
 
     function phoenix_setup_actions()
     {
-        add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 200 );
+
+        add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 100 );
         add_action( 'widgets_init', array( $this, 'register_the_widget' ) );
     }
 
@@ -85,8 +90,10 @@ final class Phoenix_Folding_Home_Stats
             else
                 $min = 'min.';
             global $post;
-            if ( has_shortcode( $post->post_content, 'phoenix_folding_stats' ) || is_active_widget( false, 'phoenix_folding_widget' ) )
-                wp_enqueue_style( 'phoenix-folding', PHOENIX_FOLDING_PLUGIN_URL . '/assets/css/phoenix-folding.' . $min . 'css', array(), $this->version, 'all' );
+            wp_register_style( 'phoenix-folding', PHOENIX_FOLDING_PLUGIN_URL . '/assets/css/phoenix-folding.' . $min . 'css', array(), $this->version, 'all' );
+
+            if ( has_shortcode( $post->post_content, 'phoenix_folding_stats' ) )
+                wp_enqueue_style( 'phoenix-folding' );
         }
     }
 
